@@ -1,31 +1,20 @@
-# ================================
-# CORE FRAMEWORKS
-# ================================
+# Core
 streamlit>=1.32.0
-torch>=2.1.0,<2.4.0          # CPU or CUDA — auto-detected
+torch>=2.1.0,<2.4.0          # CPU-only version — auto-installed on Streamlit Cloud
 transformers>=4.38.0,<5.0.0
-accelerate>=0.27.0           # Required for device_map="auto"
-bitsandbytes>=0.41.0         # For 4-bit quantization (local-4bit mode)
+accelerate>=0.27.0
 
-# ================================
-# HUGGING FACE ECOSYSTEM
-# ================================
+# Hugging Face
 huggingface-hub>=0.20.0
-sentence-transformers>=2.5.0 # For embeddings
+sentence-transformers>=2.5.0
 
-# ================================
-# LANGCHAIN + VECTOR STORES
-# ================================
+# LangChain + Vector Store
 langchain-huggingface>=0.0.3
 langchain-community>=0.0.30
-faiss-cpu>=1.7.4             # Use faiss-gpu if you have CUDA
+faiss-cpu>=1.7.4             # ✅ MUST use faiss-cpu — GPU not available
 
-# ================================
-# DOCUMENT PROCESSING
-# ================================
-pypdf>=4.0.0                 # For reading PDFs
+# Document Loader
+pypdf>=4.0.0
 
-# ================================
-# OPTIONAL — For Better UX
-# ================================
-python-dotenv>=1.0.0         # If you want to load .env files
+# Optional (for .env support)
+python-dotenv>=1.0.0
